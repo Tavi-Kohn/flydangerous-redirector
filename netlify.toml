@@ -1,10 +1,10 @@
 [build]
-command = "python ./replace.py"
+  command = "python ./replace.py"
 
 # REDIRECT_TEMPLATE_START
 [[redirects]]
   from = "REDIRECT_TEMPLATE_FROM"
   to = "REDIRECT_TEMPLATE_TO"
-  status = 307
+  status = 302
   force = true
 # REDIRECT_TEMPLATE_END
