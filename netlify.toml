@@ -5,6 +5,6 @@
 [[redirects]]
   from = "REDIRECT_TEMPLATE_FROM"
   to = "REDIRECT_TEMPLATE_TO"
-  status = 302
+  status = "REDIRECT_TEMPLATE_STATUS"
   force = true
 # REDIRECT_TEMPLATE_END

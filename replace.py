@@ -23,7 +23,7 @@ with open("netlify.toml", "r+") as config_file:
             config = '{}\n# {}\n{}\n'.format(config, redirect_name, redirect)
 
     # Retrieve the status code from environment
-    config.replace('REDIRECT_TEMPLATE_STATUS', os,getenv('REDIRECT_STATUS_CODE')
+    config = config.replace('"REDIRECT_TEMPLATE_STATUS"', os.getenv('REDIRECT_STATUS_CODE'))
     
     print(config)
     config_file.seek(0)
