@@ -22,6 +22,9 @@ with open("netlify.toml", "r+") as config_file:
                 'REDIRECT_TEMPLATE_TO', os.getenv(target_env_name))
             config = '{}\n# {}\n{}\n'.format(config, redirect_name, redirect)
 
+    # Retrieve the status code from environment
+    config.replace('REDIRECT_TEMPLATE_STATUS', os,getenv('REDIRECT_STATUS_CODE')
+    
     print(config)
     config_file.seek(0)
     config_file.write(config)
