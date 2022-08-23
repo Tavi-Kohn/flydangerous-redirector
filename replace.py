@@ -26,6 +26,8 @@ with open("netlify.toml", "r+") as config_file:
     config = config.replace('"REDIRECT_TEMPLATE_STATUS"', os.getenv('REDIRECT_STATUS_CODE', '302'))
     
     print(config)
-    config_file.seek(0)
-    config_file.write(config)
-    config_file.truncate()
+    # Only rewrite the config file when deploying to Netlify
+    if "NETLIFY" in os.environ:
+        config_file.seek(0)
+        config_file.write(config)
+        config_file.truncate()
